@@ -7,37 +7,42 @@ namespace IterationStatements
     {
         static void Main(string[] args)
         {
-                //TODO - Read each comment and complete its instruction
-                // like the example below
+               
 
-                //Create a List called "numbers" - DONE!
+                //Create a List called "numbers" 
                 var numbers = new List<int>();
             
             //-----START HERE------------------------------------------
             //Create a variable of type int and name it num
             //initialize the variable with a value of 0
 
+int num = 0;
 
 
             // Create a do-while loop and use the template below:
-
+do
             {
                 // Increment num by 1
+                num++;
 
                 // Then add num to the collection - numbers
                     // Hint: reference num inside of the Add method's parentheses
-                numbers.Add(/* num */);
+                numbers.Add(num);
 
-            } // <---- While your variable is less than 100
+            } 
+            while ( num <100);  // <---- While your variable is less than 100
 
 
 
             // Create a while loop
             // <--- While num is less than 200
+            while (num < 200)
             {
                 // Increment num by 1
+                num++;
                 // Then add num to the collection numbers
-                    //HINT: copy how this was done in the do while loop
+                //HINT: copy how this was done in the do while loop
+                numbers.Add(num);
 
             }
 
@@ -48,6 +53,13 @@ namespace IterationStatements
 
             // Create a foreach loop using the collection - numbers
                 //In the scope of the foreach loop, print each number in numbers
+                foreach ( var N in numbers)
+                {//start of foreach scope
+
+                                    // print number 
+                    Console.WriteLine($"The current number is {N}");
+                
+                }// end of foreach
              
 
 
@@ -62,8 +74,10 @@ namespace IterationStatements
                 // Decrement i by 1
 
             //start for loop here
+            for (int i = 199; i >= 0; i-- )
             {
                 // place numbers[i] inside of the Console.WriteLine() method
+                Console.WriteLine($"The current number is {numbers[i]}");
             }
 
             //------------End of exercise
